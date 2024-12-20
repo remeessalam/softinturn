@@ -177,7 +177,7 @@ const WhyChooseUs = () => {
               <img
                 src={whyus1}
                 alt="whyus1"
-                className="h-full max-h-[416px] object-cover  rounded-xl"
+                className="sm:max-h-full h-full max-h-[416px] object-cover  rounded-xl"
                 // h-[392px]
               />
             </div>
@@ -192,7 +192,7 @@ const WhyChooseUs = () => {
                 src={whyus2}
                 alt="whyus1"
                 // max-h-[416px] w-full min-h-[300px]
-                className=" h-full min-h-[300px] max-h-[416px] rounded-xl object-cover"
+                className=" sm:max-h-full  max-h-[416px] min-h-[343px] rounded-xl object-cover"
               />
             </div>
 
