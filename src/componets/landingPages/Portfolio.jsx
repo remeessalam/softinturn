@@ -72,7 +72,7 @@ const Portfolio = ({ page }) => {
           <p className="gradient-text uppercase gradient-rounded-text-box">
             Portfolio
           </p>
-          <h2 className="heading text-center my-16">Our Selected Projects</h2>
+          <h2 className="heading-2 text-center my-16">Our Selected Projects</h2>
           <div ref={sliderRef} className="keen-slider">
             {portfolio.map((obj) => (
               <div

@@ -72,8 +72,8 @@ const WhyChooseUs = () => {
           What Makes Us Different?
         </div>
         <div className="flex flex-col gap-5">
-          <h2 data-aos-offset={-200} data-aos="fade-up" className="heading-2">
-            Why Us? /<span> Why Softinturn Solutions?</span>
+          <h2 data-aos-offset={-200} data-aos="fade-up" className="heading-2 ">
+            Why Softinturn Solutions?
           </h2>
           <p
             data-aos-offset={-200}
@@ -177,7 +177,7 @@ const WhyChooseUs = () => {
               <img
                 src={whyus1}
                 alt="whyus1"
-                className="h-full object-cover  rounded-xl"
+                className="h-full max-h-[416px] object-cover  rounded-xl"
                 // h-[392px]
               />
             </div>
@@ -192,7 +192,7 @@ const WhyChooseUs = () => {
                 src={whyus2}
                 alt="whyus1"
                 // max-h-[416px] w-full min-h-[300px]
-                className=" h-full min-h-[300px] rounded-xl object-cover"
+                className=" h-full min-h-[300px] max-h-[416px] rounded-xl object-cover"
               />
             </div>
 
