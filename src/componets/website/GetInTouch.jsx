@@ -19,10 +19,10 @@ const GetInTouch = () => {
     console.log(data);
     setSpinner(true);
 
-    var emailBody = "Name: " + data.fullName + "\n\n";
+    var emailBody = "Name: " + data.name + "\n\n";
     emailBody += "Email: " + data.email + "\n\n";
-    emailBody += "Phone: " + data.mobileNumber + "\n\n";
-    // emailBody += "Subject: " + data.subject + "\n\n";
+    emailBody += "Phone: " + data.phone + "\n\n";
+    emailBody += "Subject: " + data.subject + "\n\n";
     emailBody += "Message:\n" + data.message;
 
     // Construct the request payload
