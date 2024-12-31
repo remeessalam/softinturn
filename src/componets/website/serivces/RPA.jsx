@@ -3,7 +3,7 @@ import { allServices, rpa } from "../../../constant";
 import Testimonials from "../../common/Testimonials";
 
 const RPA = () => {
-  const details = allServices[8];
+  const details = allServices[6];
   const splitIntoParagraphs = (text, numParagraphs = 3) => {
     const sentences = text.split(". ").map((sentence) => sentence + ".");
     const chunkSize = Math.ceil(sentences.length / numParagraphs);

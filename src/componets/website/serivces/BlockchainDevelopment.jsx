@@ -3,7 +3,7 @@ import { allServices, blockchaindevelopment } from "../../../constant";
 import Testimonials from "../../common/Testimonials";
 
 const BlockchainDevelopment = () => {
-  const details = allServices[5];
+  const details = allServices[4];
   const splitIntoParagraphs = (text, numParagraphs = 3) => {
     const sentences = text.split(". ").map((sentence) => sentence + ".");
     const chunkSize = Math.ceil(sentences.length / numParagraphs);

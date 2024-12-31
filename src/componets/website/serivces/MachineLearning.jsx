@@ -3,7 +3,7 @@ import { allServices, machinelearning } from "../../../constant";
 import Testimonials from "../../common/Testimonials";
 
 const MachineLearning = () => {
-  const details = allServices[6];
+  const details = allServices[2];
   const splitIntoParagraphs = (text, numParagraphs = 3) => {
     const sentences = text.split(". ").map((sentence) => sentence + ".");
     const chunkSize = Math.ceil(sentences.length / numParagraphs);

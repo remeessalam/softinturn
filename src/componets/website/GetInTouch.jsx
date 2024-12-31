@@ -1,6 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import image from "../../assets/images/contactimage.jpg";
+import { companyDetails } from "../../constant";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 const GetInTouch = () => {
+  const [spinner, setSpinner] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+  const navigate = useNavigate();
+
+  const onSubmit = async (data) => {
+    console.log(data);
+    setSpinner(true);
+
+    var emailBody = "Name: " + data.fullName + "\n\n";
+    emailBody += "Email: " + data.email + "\n\n";
+    emailBody += "Phone: " + data.mobileNumber + "\n\n";
+    // emailBody += "Subject: " + data.subject + "\n\n";
+    emailBody += "Message:\n" + data.message;
+
+    // Construct the request payload
+    var payload = {
+      to: companyDetails.email,
+      // to: "remeesreme4u@gmail.com",
+      subject: "You have a new message from SOFTINTURN",
+      body: emailBody,
+    };
+
+    await fetch("https://smtp-api-tawny.vercel.app/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((response) => response.json())
+      .then(() => {
+        toast.success("Email sent successfully");
+        reset();
+        navigate("/thank-you");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      })
+      .finally(() => setSpinner(false));
+  };
   return (
     <div id="contact" className="pb-[5rem] relative">
       {/* <div className="blurred-red-circle h-[25rem] w-[25rem] bottom-[2rem] right-3 -z-10"></div> */}
@@ -27,65 +77,101 @@ const GetInTouch = () => {
               Connect With Our Team to Get Started!
             </h2>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit(onSubmit)}
               className="grid grid-cols-1 gap-3 mt-3"
             >
               <div className="grid lg:grid-cols-2 gap-3">
-                <div className="">
-                  <label htmlFor="">Name*</label>
+                <div>
+                  <label htmlFor="name">Name*</label>
                   <input
+                    {...register("name", { required: "Name is required" })}
                     type="text"
                     className="w-full outline-none p-3 rounded-lg text-black"
-                    required
-                    autoComplete="off"
                     placeholder="Enter your name"
                   />
+                  {errors.name && (
+                    <span className="text-red-500 text-sm">
+                      {errors.name.message}
+                    </span>
+                  )}
                 </div>
-                <div className="">
-                  <label htmlFor="">Email*</label>
+                <div>
+                  <label htmlFor="email">Email*</label>
                   <input
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: "Enter a valid email",
+                      },
+                    })}
                     type="email"
                     className="w-full outline-none p-3 rounded-lg text-black"
-                    required
-                    autoComplete="off"
                     placeholder="Enter your email"
                   />
+                  {errors.email && (
+                    <span className="text-red-500 text-sm">
+                      {errors.email.message}
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="grid lg:grid-cols-2 gap-3">
-                <div className="">
-                  <label htmlFor="">Subject*</label>
+                <div>
+                  <label htmlFor="subject">Subject*</label>
                   <input
+                    {...register("subject", {
+                      required: "Subject is required",
+                    })}
                     type="text"
                     className="w-full outline-none p-3 rounded-lg text-black"
-                    required
-                    autoComplete="off"
                     placeholder="Enter subject"
                   />
+                  {errors.subject && (
+                    <span className="text-red-500 text-sm">
+                      {errors.subject.message}
+                    </span>
+                  )}
                 </div>
-                <div className="">
-                  <label htmlFor="">Phone Number</label>
+                <div>
+                  <label htmlFor="phone">Phone Number</label>
                   <input
+                    {...register("phone", {
+                      pattern: {
+                        value: /^\d{10}$/,
+                        message: "Enter a valid phone number",
+                      },
+                    })}
                     type="tel"
                     className="w-full outline-none p-3 rounded-lg text-black"
-                    autoComplete="off"
                     placeholder="Enter your phone number"
                   />
+                  {errors.phone && (
+                    <span className="text-red-500 text-sm">
+                      {errors.phone.message}
+                    </span>
+                  )}
                 </div>
               </div>
-              <div className="">
-                <label htmlFor="">Message*</label>
+              <div>
+                <label htmlFor="message">Message*</label>
                 <textarea
-                  type="text"
+                  {...register("message", { required: "Message is required" })}
                   rows="4"
-                  placeholder="Enter your message here"
                   className="w-full outline-none p-3 rounded-lg text-black"
-                  required
-                  autoComplete="off"
+                  placeholder="Enter your message here"
                 />
+                {errors.message && (
+                  <span className="text-red-500 text-sm">
+                    {errors.message.message}
+                  </span>
+                )}
               </div>
-              <button className="mt-4 bg-white text-black px-5 py-3 rounded-full   hover:text-primary hover:-translate-y-1 duration-300 transition-all">
-                Send Message
+              <button
+                type="submit"
+                className="mt-4 bg-white text-black px-5 py-3 rounded-full hover:text-primary hover:-translate-y-1 duration-300 transition-all"
+              >
+                {spinner ? "Sending..." : "  Send Message"}
               </button>
             </form>
           </div>

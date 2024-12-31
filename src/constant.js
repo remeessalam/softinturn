@@ -397,7 +397,7 @@ export const allServices = [
   {
     id: 7,
     img: <FaSitemap className="w-6 h-6" />,
-    link: "/services/cloud-computing",
+    link: "/services/IT-management",
     title: "IT Management",
     desc: "Streamline IT operations for efficiency and reliability. Maximize technology investments to support business objectives and innovation",
     detailContent:

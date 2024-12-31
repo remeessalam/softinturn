@@ -2,7 +2,7 @@ import { allServices, serviceaidevelopment } from "../../../constant";
 import Testimonials from "../../common/Testimonials";
 
 const ArtificialIntelligence = () => {
-  const details = allServices[1];
+  const details = allServices[5];
   const splitIntoParagraphs = (text, numParagraphs = 3) => {
     const sentences = text.split(". ").map((sentence) => sentence + ".");
     const chunkSize = Math.ceil(sentences.length / numParagraphs);

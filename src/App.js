@@ -67,21 +67,21 @@ export default function App() {
           <Route path="/thank-you" element={<Thankyou />} />
 
           <Route path="/services" element={<ServicePageLayout />}>
-            <Route path="web-app-development" element={<WebAppDevelopment />} />
+            <Route path="web-development" element={<WebAppDevelopment />} />
             <Route path="ai-development" element={<ArtificialIntelligence />} />
             <Route
               path="chatbot-development"
               element={<ChatbotDevelopment />}
             />
             <Route path="data-analytics" element={<DataAnalytics />} />
-            <Route path="game-development" element={<GameDevelopment />} />
+            <Route path="app-development" element={<GameDevelopment />} />
             <Route
-              path="blockchain-development"
+              path="software-services"
               element={<BlockchainDevelopment />}
             />
             <Route path="machine-learning" element={<MachineLearning />} />
             <Route path="cloud-computing" element={<CloudComputing />} />
-            <Route path="RPA" element={<RPA />} />
+            <Route path="IT-management" element={<RPA />} />
           </Route>
 
           {/* Landing Pages */}
