@@ -119,6 +119,7 @@ const LandingHeader = () => {
                   offset={-60}
                   duration={1000}
                   activeClass="active-link"
+                  onClick={() => setIsOpen(false)}
                 >
                   {option.name}
                 </Link>

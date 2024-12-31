@@ -6,7 +6,7 @@ const Faqs = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="sm:py-[5rem] bg-backgroundcolor">
+    <div className=" py-[2rem] sm:py-[5rem] bg-backgroundcolor">
       <div className="wrapper grid lg:grid-cols-2 gap-10 lg:gap-0 items-center">
         <div className="lg:flex hidden items-end justify-end">
           <div className="hover:scale-105 transition-all duration-500 bg-gradient-to-r min-w-[13rem] flex flex-col items-center text-white w-fit from-secondary/80 to-primary/80 rounded-xl p-5">
