@@ -450,7 +450,7 @@ export const LandingPageAiCalling = ({ page }) => {
         </div>
       </section>
       {/** WHY TRUST US */}
-      <div className="max-w-3xl mx-auto text-center text-primarytextcolor ">
+      <div className="max-w-3xl px-4  mx-auto text-center text-primarytextcolor ">
         <h1 data-aos="fade-up" className="gradient-rounded-text-box mx-auto">
           Why Businesses Trust Us
         </h1>
