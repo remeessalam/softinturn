@@ -42,6 +42,10 @@ import aboutfive from "./assets/images/aboutfive.jpg";
 import aboutusintroone from "./assets/images/aboutusintroone.jpg";
 import aboutusintrotwo from "./assets/images/aboutusintrotwo.jpg";
 import allbgimage from "./assets/images/allbgimage.jpg";
+import aicallingcontact from "./assets/images/aicallingcontact.jpg";
+import aicallinglandingabout from "./assets/images/aicallinglandingabout.jpg";
+import aicallingwhychoose from "./assets/images/aicallingwhychoose.jpg";
+import aicallingwhychoose2 from "./assets/images/aicallingwhychoose2.jpg";
 import { lazy } from "react";
 import { BiBrain, BiBulb, BiRocket } from "react-icons/bi";
 import { GoFileMedia, GoGraph } from "react-icons/go";
@@ -51,6 +55,13 @@ import {
   MdOutlineDeveloperMode,
   MdOutlineWeb,
   MdPermMedia,
+  MdCall,
+  MdFollowTheSigns,
+  MdEventAvailable,
+  MdSupportAgent,
+  MdFeedback,
+  MdInsights,
+  MdLanguage,
 } from "react-icons/md";
 import {
   GiArtificialIntelligence,
@@ -58,9 +69,25 @@ import {
   GiTeamIdea,
   GiVendingMachine,
 } from "react-icons/gi";
+// import {
+//   MdCall,
+//   MdFollowTheSigns,
+//   MdEventAvailable,
+//   MdSupportAgent,
+//   MdFeedback,
+//   MdInsights,
+//   MdLanguage,
+// } from "react-icons/md";
 import { HiChatBubbleBottomCenterText } from "react-icons/hi2";
 import { BsFillClipboard2DataFill } from "react-icons/bs";
-import { FaAppStoreIos, FaGamepad, FaSitemap } from "react-icons/fa";
+import {
+  FaAppStoreIos,
+  FaChartLine,
+  FaGamepad,
+  FaHandsHelping,
+  FaSitemap,
+  FaUserCheck,
+} from "react-icons/fa";
 import { SiEasyeda, SiFlutter, SiHiveBlockchain } from "react-icons/si";
 import { IoLogoAndroid, IoMdCloudDone } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
@@ -80,6 +107,7 @@ export {
   whyChooseUsIcon1,
   whyChooseUsIcon2,
   whyChooseUsIcon3,
+  aicallingcontact,
   whyChooseUsIcon4,
   whyChooseUsIcon5,
   whyChooseUsIcon6,
@@ -92,8 +120,11 @@ export {
   endlessOpportunitiesImg2,
   endlessOpportunitiesImg3,
   homeBannerVideo,
+  aicallinglandingabout,
+  aicallingwhychoose2,
   defaultBanner,
   aboutUsBanner,
+  aicallingwhychoose,
   aboutUsGridImg1,
   aboutUsGridImg2,
   aboutUsGridImg3,
@@ -492,6 +523,51 @@ export const reviews = [
   },
 ];
 
+export const aicallingtestimonials = [
+  {
+    id: 1,
+    name: "John Doe",
+    role: "Marketing Manager, TechCorp",
+    desc: "Managing customer outreach used to take up so much of our time and resources. Since teaming up with SOFTINTURN, we’ve seen a complete turnaround. Their AI calling service is efficient, easy to use, and has boosted our lead conversion rate by 40%. The personalized touch on every call is amazing, and the analytics we get have helped us fine-tune our strategy. Couldn’t recommend them more!",
+    profileImg: profileImg2,
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    role: "Customer Success Lead, ClientFirst",
+    desc: "Customer satisfaction has always been our top priority, but SOFTINTURN helped us take it further. Their follow-up system is a game-changer. We’re now able to reconnect with our clients at just the right time, and it’s made a noticeable difference in our retention rate. The team has been incredibly supportive, making sure everything runs smoothly.",
+    profileImg: profileImg1,
+  },
+  {
+    id: 3,
+    name: "Michael Johnson",
+    role: "Sales Director, BizBoost",
+    desc: "From the moment we started working with SOFTINTURN, it was clear we were in good hands. Their AI technology is smart, intuitive, and completely integrated into our workflow without a hitch. Our sales team is now more focused, and we’ve seen a 25% increase in new clients. Their professionalism and dedication have been top-notch!",
+    profileImg: profileImg2,
+  },
+  {
+    id: 4,
+    name: "Emily Davis",
+    role: "Operations Manager, HealthTrack",
+    desc: "Our appointment process used to be a mess, with missed bookings and no-shows. SOFTINTURN’s automated system has been a lifesaver. It’s incredibly easy for our customers to schedule appointments, and we’ve seen a huge drop in missed meetings. It’s streamlined everything, and we can’t imagine going back to the old way of doing things.",
+    profileImg: profileImg1,
+  },
+  {
+    id: 5,
+    name: "Sarah Wilson",
+    role: "Product Manager, MarketPulse",
+    desc: "We used SOFTINTURN for a product launch survey, and the results were beyond what we expected. Their system handled thousands of calls effortlessly, and the insights we received helped us understand our customers like never before. The whole process was smooth and effective. We’ll definitely use this service for future projects.",
+    profileImg: profileImg1,
+  },
+  {
+    id: 6,
+    name: "David Brown",
+    role: "CEO, GlobalReach Inc.",
+    desc: "As a company that serves customers around the world, we struggled with language barriers for years. SOFTINTURN’s multilingual calling service has completely solved that problem. Now, our international clients feel heard and understood, and it’s strengthened our relationships with them. Their service is reliable, efficient, and perfectly tailored to our needs.",
+    profileImg: profileImg2,
+  },
+];
+
 // portfolio images (web development)
 export const webPortfolio = [
   {
@@ -583,11 +659,11 @@ export const appPortfolio = [
     img: require("./assets/images/app_projects/2.webp"),
     title: "Find A Driver",
   },
-  {
-    id: 3,
-    img: require("./assets/images/app_projects/3.webp"),
-    title: "Glowsy",
-  },
+  // {
+  //   id: 3,
+  //   img: require("./assets/images/app_projects/3.webp"),
+  //   title: "Glowsy",
+  // },
   {
     id: 4,
     img: require("./assets/images/app_projects/4.webp"),
@@ -673,5 +749,140 @@ export const aboutUsItems = [
       "We provide a comprehensive range of services, ensuring end-to-end support from initial concept to deployment and beyond. Our aim is to be your trusted partner throughout your digital journey.",
     image: aboutfive,
     gradient: "from-primary/60 to-primary/80",
+  },
+];
+
+export const Ai_Callingservices = [
+  {
+    title: "Outbound Calling Made Smarter",
+    icon: <MdCall />,
+    description:
+      "Reaching out to potential customers or clients has never been easier. With our AI-driven outbound calling service, you can make an impact at scale without sacrificing quality.",
+    points: [
+      "Personalized Messaging: Every call feels unique and relevant to the recipient.",
+      "High-Volume Outreach: Easily handle large-scale campaigns with precision.",
+      "Save Time: Automate repetitive tasks while maintaining a personal touch.",
+    ],
+    useCase:
+      "Use this service for lead generation, promotional campaigns, or customer acquisition efforts.",
+  },
+  {
+    title: "Effortless Follow-Ups",
+    icon: <MdFollowTheSigns />,
+    description:
+      "Following up is crucial, and we make it simple. Our AI ensures you stay on top of every opportunity without the hassle of manual tracking.",
+    points: [
+      "Timely Reminders: Schedule callbacks at the perfect time.",
+      "Continuity in Conversations: AI tracks previous interactions for seamless follow-ups.",
+      "Improved Engagement: Keep your prospects and customers in the loop.",
+    ],
+    useCase:
+      "This is ideal for nurturing leads, closing sales, or enhancing customer relationships.",
+  },
+  {
+    title: "Streamlined Appointment Scheduling",
+    icon: <MdEventAvailable />,
+    description:
+      "Make booking appointments hassle-free with our intelligent calling system.",
+    points: [
+      "Real-Time Integration: Syncs with your calendar for instant updates.",
+      "Professional Interactions: Calls are clear, concise, and courteous.",
+      "Always Available: Ensure your customers can schedule appointments at their convenience.",
+    ],
+    useCase:
+      "Perfect for industries like healthcare, education, and professional services.",
+  },
+  {
+    title: "Enhanced Customer Support",
+    icon: <MdSupportAgent />,
+    description:
+      "Deliver exceptional service with our AI-powered customer support solutions.",
+    points: [
+      "Quick Resolutions: Address common inquiries efficiently.",
+      "Scalable Service: Handle high call volumes effortlessly.",
+      "Human Backup: Escalate complex issues to live agents seamlessly.",
+    ],
+    useCase:
+      "This is ideal for businesses looking to enhance customer satisfaction while reducing response times.",
+  },
+  {
+    title: "Surveys and Feedback Collection",
+    icon: <MdFeedback />,
+    description:
+      "Learn more about your customers with our interactive survey and feedback services.",
+    points: [
+      "Increased Participation: Voice calls have a higher response rate than traditional surveys.",
+      "Custom Scripts: Design questions that align with your goals.",
+      "Data-Driven Results: Get actionable insights to refine your strategies.",
+    ],
+    useCase:
+      "Great for post-purchase feedback, event surveys, or market research.",
+  },
+  {
+    title: "Actionable Insights & Analytics",
+    icon: <MdInsights />,
+    description:
+      "Turn your calls into valuable data with our advanced analytics tools.",
+    points: [
+      "Track Performance: Monitor key metrics like conversion rates and call success.",
+      "Identify Trends: Use data insights to improve future campaigns.",
+      "Customized Reporting: Tailor reports to match your specific objectives.",
+    ],
+    useCase:
+      "This service is essential for optimizing sales strategies and improving customer engagement.",
+  },
+  {
+    title: "Multilingual Communication Solutions",
+    icon: <MdLanguage />,
+    description:
+      "Expand your reach with our multilingual calling capabilities, designed to help you connect with customers across the globe.",
+    points: [
+      "Global Outreach: Speak your customers’ language, wherever they are.",
+      "Localized Messages: Adapt conversations to reflect cultural nuances.",
+      "Fluent Conversations: AI ensures accurate and natural communication.",
+    ],
+    useCase: "Perfect for businesses with a diverse or international audience.",
+  },
+];
+
+export const businesstrust = [
+  {
+    heading: "Personalized Approach",
+    icon: <FaUserCheck />,
+    description:
+      "We tailor our solutions to fit your unique challenges and goals, ensuring they align with your business needs.",
+  },
+  {
+    heading: "Real Impact",
+    icon: <FaChartLine />,
+    description:
+      "From better engagement to higher conversions, our clients see measurable results that drive growth and success.",
+  },
+  {
+    heading: "Dedicated Support Team",
+    icon: <FaHandsHelping />,
+    description:
+      "We’re here for you at every step, providing continuous assistance to ensure your success.",
+  },
+];
+
+export const westandfor = [
+  {
+    id: 1,
+    heading: "Innovation First",
+    description:
+      "We’re constantly pushing the boundaries of what AI can do to make your life easier.",
+  },
+  {
+    id: 2,
+    heading: "Customer-Centric",
+    description:
+      "Your success is our success. We work hand-in-hand with you to create solutions that truly fit your needs.",
+  },
+  {
+    id: 3,
+    heading: "Results-Driven",
+    description:
+      "It’s not just about making calls—it’s about making a difference. We’re here to help you achieve measurable outcomes.",
   },
 ];

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import image from "../../assets/images/contactimage.jpg";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { companyDetails } from "../../constant";
+import { aicallingcontact, companyDetails } from "../../constant";
 const Contact = () => {
   const [spinner, setSpinner] = useState(false);
 
@@ -69,7 +69,7 @@ const Contact = () => {
               new heights.
             </p>
             <img
-              src={image}
+              src={aicallingcontact}
               alt=""
               className="max-h-[21rem] object-cover rounded-xl"
             />

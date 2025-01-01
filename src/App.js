@@ -25,6 +25,7 @@ import RPA from "./componets/website/serivces/RPA.jsx";
 import WhatsAppIcon from "./componets/common/Whatsapp.jsx";
 import { Toaster } from "react-hot-toast";
 import Thankyou from "./componets/common/ThankYou.jsx";
+import { LandingPageAiCalling } from "./pages/landingPages/LandingPage-AiCalling.jsx";
 
 AOS.init({
   once: true,
@@ -101,6 +102,16 @@ export default function App() {
               <>
                 <LandingHeader />
                 <LandingPage page={"app-development"} />
+                <LandingFooter />
+              </>
+            }
+          />
+          <Route
+            path="/ai-calling"
+            element={
+              <>
+                <LandingHeader />
+                <LandingPageAiCalling page={"ai-calling"} />
                 <LandingFooter />
               </>
             }
