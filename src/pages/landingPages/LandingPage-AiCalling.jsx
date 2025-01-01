@@ -153,7 +153,7 @@ export const LandingPageAiCalling = ({ page }) => {
         /> */}
         <img
           src={aicallingbanner}
-          className="w-full h-full object-cover object-center absolute"
+          className="w-screen h-full object-cover object-top scale-105 absolute"
           alt=""
         />
         <div className="bg-black/50 absolute w-full h-full"></div>
