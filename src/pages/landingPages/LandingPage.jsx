@@ -8,6 +8,7 @@ import React, { useState } from "react";
 // import section5Img7 from "../../assets/images/section-5-img-7.png";
 import Contact from "../../componets/landingPages/Contact";
 import {
+  aicallingcontact,
   appDevBanner,
   appLandingAbout,
   companyDetails,
@@ -328,7 +329,7 @@ export const LandingPage = ({ page }) => {
                 helping your business reach new heights.
               </p>
               <img
-                src={image}
+                src={aicallingcontact}
                 alt=""
                 className="max-h-[21rem] object-cover rounded-xl"
               />
