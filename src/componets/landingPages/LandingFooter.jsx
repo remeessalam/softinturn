@@ -1,8 +1,9 @@
 import React from "react";
-import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsLinkedin, BsYoutube } from "react-icons/bs";
 import { Link as ScrollLink } from "react-scroll";
 import { companyDetails, logoImg } from "../../constant";
 import { Link } from "react-router-dom";
+import { FaXTwitter } from "react-icons/fa6";
 
 const LandingFooter = () => {
   return (
@@ -97,7 +98,7 @@ const LandingFooter = () => {
                 <BsFacebook className="text-xl text-white hover:text-primary transition-all duration-300" />
               </Link>
               <Link>
-                <BsTwitter className="text-xl text-white hover:text-primary transition-all duration-300" />
+                <FaXTwitter className="text-xl text-white hover:text-primary transition-all duration-300" />
               </Link>
               <Link>
                 <BsLinkedin className="text-xl text-white hover:text-primary transition-all duration-300" />

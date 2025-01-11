@@ -7,7 +7,7 @@ import LandingFooter from "./componets/landingPages/LandingFooter";
 import WebsiteHeader from "./componets/website/WebsiteHeader";
 import WebsiteFooter from "./componets/website/WebsiteFooter";
 import { routes } from "./constant";
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { LoadingSpinner } from "./componets/common/LoadingSpinner";
 import SpinnerContextProvider, {
   LoadingSpinnerContext,
@@ -26,6 +26,8 @@ import WhatsAppIcon from "./componets/common/Whatsapp.jsx";
 import { Toaster } from "react-hot-toast";
 import Thankyou from "./componets/common/ThankYou.jsx";
 import { LandingPageAiCalling } from "./pages/landingPages/LandingPage-AiCalling.jsx";
+import { BsArrowBarUp } from "react-icons/bs";
+import { FaArrowUp } from "react-icons/fa";
 
 AOS.init({
   once: true,
@@ -49,6 +51,7 @@ export default function App() {
           }}
         />
         <ScrollToTop />
+        <ScrollToTopButton />
         <Routes>
           {/* Website Pages */}
           {routes.map(({ component, name, path }, index) => (
@@ -132,3 +135,43 @@ const ScrollToTop = () => {
   }, [pathname]);
   return null;
 };
+
+function ScrollToTopButton() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Toggle visibility based on scroll position
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  // Scroll to top handler
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    isVisible && (
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-2 right-5 z-50 px-3 py-2 bg-primary text-white rounded-full shadow-lg hover:bg-blue-700 focus:outline-none flex items-center gap-2 transition-all duration-500 ${
+          isVisible ? `opacity-100` : `opacity-0`
+        }`}
+        aria-label="Scroll to Top"
+      >
+        Scroll to Top <FaArrowUp />
+      </button>
+    )
+  );
+}

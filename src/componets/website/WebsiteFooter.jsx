@@ -1,8 +1,9 @@
 import React from "react";
-import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsLinkedin, BsYoutube } from "react-icons/bs";
 import { companyDetails, logoImg, routes } from "../../constant";
 import { Link } from "react-router-dom";
 import { RiInstagramFill } from "react-icons/ri";
+import { FaXTwitter } from "react-icons/fa6";
 
 const WebsiteFooter = () => {
   return (
@@ -74,7 +75,7 @@ const WebsiteFooter = () => {
                 to={"https://x.com/softinturn"}
                 className="group w-[2.5rem] h-[2.5rem] rounded-full border-primary border flex justify-center items-center"
               >
-                <BsTwitter className="text-xl text-white group-hover:text-primary transition-all duration-300" />
+                <FaXTwitter className="text-xl text-white group-hover:text-primary transition-all duration-300" />
               </Link>
               <Link
                 to={"https://www.linkedin.com/company/softinturn/"}

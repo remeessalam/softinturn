@@ -4,8 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaPhone } from "react-icons/fa";
 import { companyDetails } from "../../constant";
 import { IoMail } from "react-icons/io5";
-import { FaLocationDot } from "react-icons/fa6";
-import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
+import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
+import { BsFacebook, BsLinkedin, BsYoutube } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { RiInstagramFill } from "react-icons/ri";
@@ -227,7 +227,7 @@ const ContactUs = () => {
               to={"https://x.com/softinturn"}
               className="group w-[2.5rem] h-[2.5rem] rounded-full border-primary border flex justify-center items-center"
             >
-              <BsTwitter className="text-xl text-primarytextcolor group-hover:text-primary transition-all duration-300" />
+              <FaXTwitter className="text-xl text-primarytextcolor group-hover:text-primary transition-all duration-300" />
             </Link>
             <Link
               to={"https://www.linkedin.com/company/softinturn/"}

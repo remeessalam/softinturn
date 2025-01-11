@@ -85,6 +85,7 @@ import {
   FaChartLine,
   FaGamepad,
   FaHandsHelping,
+  FaRobot,
   FaSitemap,
   FaUserCheck,
 } from "react-icons/fa";
@@ -439,6 +440,15 @@ export const allServices = [
     img: <IoMdCloudDone className="w-6 h-6" />,
     link: "/services/cloud-computing",
     title: "Cloud Computing",
+    desc: "Embrace the scalability, flexibility, and efficiency of cloud computing with our comprehensive services. Whether you need to migrate to the cloud, optimize your infrastructure, or develop cloud-native applications, we’ve got you covered.",
+    detailContent:
+      "We help businesses harness the full potential of cloud computing with tailored solutions that meet your unique needs. Whether you're migrating to the cloud, optimizing your infrastructure, or building cloud-native applications, our team has the expertise to deliver results. We focus on security, scalability, and cost-efficiency, ensuring your cloud environment supports your business goals. From planning and deployment to monitoring and optimization, we provide end-to-end support to make your cloud journey seamless and successful.",
+  },
+  {
+    id: 8,
+    img: <FaRobot className="w-6 h-6" />,
+    link: "/ai-calling",
+    title: "AI-Powered Calling",
     desc: "Embrace the scalability, flexibility, and efficiency of cloud computing with our comprehensive services. Whether you need to migrate to the cloud, optimize your infrastructure, or develop cloud-native applications, we’ve got you covered.",
     detailContent:
       "We help businesses harness the full potential of cloud computing with tailored solutions that meet your unique needs. Whether you're migrating to the cloud, optimizing your infrastructure, or building cloud-native applications, our team has the expertise to deliver results. We focus on security, scalability, and cost-efficiency, ensuring your cloud environment supports your business goals. From planning and deployment to monitoring and optimization, we provide end-to-end support to make your cloud journey seamless and successful.",

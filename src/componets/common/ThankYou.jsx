@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // import { companyDetails, logoImg, routes } from "../constant";
-import { BsFacebook, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsLinkedin, BsYoutube } from "react-icons/bs";
 import { companyDetails, logoImg, routes } from "../../constant";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Thankyou = () => {
   return (
@@ -79,7 +80,7 @@ const Thankyou = () => {
                   <BsFacebook className="text-xl text-gray-500 hover:text-primary transition-all duration-300" />
                 </Link>
                 <Link>
-                  <BsTwitter className="text-xl text-gray-500 hover:text-primary transition-all duration-300" />
+                  <FaXTwitter className="text-xl text-gray-500 hover:text-primary transition-all duration-300" />
                 </Link>
                 <Link>
                   <BsLinkedin className="text-xl text-gray-500 hover:text-primary transition-all duration-300" />
